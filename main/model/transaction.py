@@ -1,6 +1,8 @@
 import datetime as dt
 
 from marshmallow import Schema, fields
+#marshmello for converting complex datatypes from/to built-in datatypes
+#Also, for validating, deserializing and serializing
 
 class Transaction(object):
 	def __init__(self, description, amount, type):
