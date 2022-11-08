@@ -32,7 +32,7 @@ def add_income():
 @app.route('/expenses')
 def get_expenses():
     schema = ExpenseSchema(many=True)
-    incomes = schema.dump(
+    expenses = schema.dump(
         filter(lambda t: t.type == TransactionType.EXPENSE, transactions)
         )
     return jsonify(expenses)
