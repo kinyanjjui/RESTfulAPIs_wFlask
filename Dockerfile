@@ -7,7 +7,7 @@ RUN pip install --no-cache-dir pipenv
 #Defining working directory and adding source code
 WORKDIR /usr/src/app
 COPY Pipfile Pipfile.lock bootstrap.sh ./
-COPY main /.main
+COPY main ./main
 
 #Install API dependencies
 RUN pipenv install --system --deploy
